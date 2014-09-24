@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0DA60347-502C-4402-8419-4AD450A888CF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>hybrid</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>27B97E0A-52F0-425F-BAA2-4E11FC9C9066</key>
+		<string>https://github.com/shekhargulati/instant-flask-web-development-book-app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>hybrid.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>27B97E0A-52F0-425F-BAA2-4E11FC9C9066</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/shekhargulati/instant-flask-web-development-book-app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>27B97E0A-52F0-425F-BAA2-4E11FC9C9066</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>27B97E0A-52F0-425F-BAA2-4E11FC9C9066</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hybrid</string>
+		</dict>
+	</array>
+</dict>
+</plist>

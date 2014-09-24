@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Analyze{% endblock title %}
+
+{% block main %}
+<div class="row">
+  <div class="login well offset2 span8">
+    <form action="" method=post class="form-horizontal">
+    <h2>Submit for Analysis</h2>
+    
+    <div class="control-group">
+        <div class="controls">
+          <button type="submit" class="btn btn-success">Analyze</button>
+        </div>
+    </div>
+  </form>
+  </div>
+</div>
+{% if myInfo %}
+<div class="row">
+    <div class="login well offset2 span8">
+        <form method="post" class="form-horizontal">
+            <legend>Analysis Results</legend>
+            <p>
+            {{ myInfo }}
+            </p>
+        </form>
+    </div>
+</div>
+{% endif %}
+{% endblock main %}

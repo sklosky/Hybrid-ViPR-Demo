@@ -1,0 +1,250 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		DE740BA219C9D41800752DB2 /* viprs3.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = viprs3.py; path = sched/viprs3.py; sourceTree = "<group>"; };
+		DEBFEC1A19C67C7800571EE1 /* manage.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = manage.py; sourceTree = "<group>"; };
+		DEBFEC1E19C67C7900571EE1 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		DEBFEC2019C67C7900571EE1 /* app.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = app.py; sourceTree = "<group>"; };
+		DEBFEC2219C67C7900571EE1 /* config.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = config.py; sourceTree = "<group>"; };
+		DEBFEC2419C67C7900571EE1 /* filters.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = filters.py; sourceTree = "<group>"; };
+		DEBFEC2619C67C7900571EE1 /* forms.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = forms.py; sourceTree = "<group>"; };
+		DEBFEC2819C67C7900571EE1 /* models.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = models.py; sourceTree = "<group>"; };
+		DEBFEC2C19C67C7900571EE1 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		DEBFEC3319C67C7900571EE1 /* base.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = base.html; sourceTree = "<group>"; };
+		DEBFEC3519C67C7900571EE1 /* not_found.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = not_found.html; sourceTree = "<group>"; };
+		DEBFEC3719C67C7900571EE1 /* capture.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = capture.html; sourceTree = "<group>"; };
+		DEBFEC3819C67C7900571EE1 /* analyze.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = analyze.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		DEBFEC0F19C67BF700571EE1 = {
+			isa = PBXGroup;
+			children = (
+				DE740BA219C9D41800752DB2 /* viprs3.py */,
+				DEBFEC1A19C67C7800571EE1 /* manage.py */,
+				DEBFEC1D19C67C7900571EE1 /* sched */,
+			);
+			sourceTree = "<group>";
+		};
+		DEBFEC1D19C67C7900571EE1 /* sched */ = {
+			isa = PBXGroup;
+			children = (
+				DEBFEC1E19C67C7900571EE1 /* __init__.py */,
+				DEBFEC2019C67C7900571EE1 /* app.py */,
+				DEBFEC2219C67C7900571EE1 /* config.py */,
+				DEBFEC2419C67C7900571EE1 /* filters.py */,
+				DEBFEC2619C67C7900571EE1 /* forms.py */,
+				DEBFEC2819C67C7900571EE1 /* models.py */,
+				DEBFEC2A19C67C7900571EE1 /* static */,
+				DEBFEC2D19C67C7900571EE1 /* templates */,
+			);
+			path = sched;
+			sourceTree = "<group>";
+		};
+		DEBFEC2A19C67C7900571EE1 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				DEBFEC2B19C67C7900571EE1 /* img */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		DEBFEC2B19C67C7900571EE1 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				DEBFEC2C19C67C7900571EE1 /* favicon.ico */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		DEBFEC2D19C67C7900571EE1 /* templates */ = {
+			isa = PBXGroup;
+			children = (
+				DEBFEC3319C67C7900571EE1 /* base.html */,
+				DEBFEC3419C67C7900571EE1 /* error */,
+				DEBFEC3619C67C7900571EE1 /* user */,
+			);
+			path = templates;
+			sourceTree = "<group>";
+		};
+		DEBFEC3419C67C7900571EE1 /* error */ = {
+			isa = PBXGroup;
+			children = (
+				DEBFEC3519C67C7900571EE1 /* not_found.html */,
+			);
+			path = error;
+			sourceTree = "<group>";
+		};
+		DEBFEC3619C67C7900571EE1 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				DEBFEC3719C67C7900571EE1 /* capture.html */,
+				DEBFEC3819C67C7900571EE1 /* analyze.html */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		DEBFEC1419C67BF700571EE1 /* hybrid */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = DEBFEC1719C67BF700571EE1 /* Build configuration list for PBXLegacyTarget "hybrid" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/python;
+			dependencies = (
+			);
+			name = hybrid;
+			passBuildSettingsInEnvironment = 1;
+			productName = hybrid;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		DEBFEC1019C67BF700571EE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = EMC;
+			};
+			buildConfigurationList = DEBFEC1319C67BF700571EE1 /* Build configuration list for PBXProject "hybrid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DEBFEC0F19C67BF700571EE1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEBFEC1419C67BF700571EE1 /* hybrid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		DEBFEC1519C67BF700571EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DEBFEC1619C67BF700571EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DEBFEC1819C67BF700571EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DEBFEC1919C67BF700571EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEBFEC1319C67BF700571EE1 /* Build configuration list for PBXProject "hybrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBFEC1519C67BF700571EE1 /* Debug */,
+				DEBFEC1619C67BF700571EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEBFEC1719C67BF700571EE1 /* Build configuration list for PBXLegacyTarget "hybrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBFEC1819C67BF700571EE1 /* Debug */,
+				DEBFEC1919C67BF700571EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEBFEC1019C67BF700571EE1 /* Project object */;
+}
