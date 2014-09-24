@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>0DA60347-502C-4402-8419-4AD450A888CF</string>
+	<string>4D389B83-0E6B-456A-91D1-CF25771ECB6D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>hybrid</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>27B97E0A-52F0-425F-BAA2-4E11FC9C9066</key>
-		<string>https://github.com/shekhargulati/instant-flask-web-development-book-app.git</string>
+		<key>B9E6D342-F202-4AC5-AECA-7A449B140E32</key>
+		<string>ssh://github.com/sklosky/Hybrid-ViPR-Demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>hybrid.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>27B97E0A-52F0-425F-BAA2-4E11FC9C9066</key>
+		<key>B9E6D342-F202-4AC5-AECA-7A449B140E32</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/shekhargulati/instant-flask-web-development-book-app.git</string>
+	<string>ssh://github.com/sklosky/Hybrid-ViPR-Demo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>27B97E0A-52F0-425F-BAA2-4E11FC9C9066</string>
+	<string>B9E6D342-F202-4AC5-AECA-7A449B140E32</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>27B97E0A-52F0-425F-BAA2-4E11FC9C9066</string>
+			<string>B9E6D342-F202-4AC5-AECA-7A449B140E32</string>
 			<key>IDESourceControlWCCName</key>
 			<string>hybrid</string>
 		</dict>
