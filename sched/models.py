@@ -80,14 +80,18 @@ def run_analyze():
     #run the map reduce scripts on the hadoop system
     #note -- will need to run python as the hadoop user
     result = ''
+    myLines = ''
 
     #check to see if the output file exists
     fname = '/home/hadoop/output.txt'
     if (os.path.isfile(fname)):
-        f = open('filename')
-        result = f.readlines()
+        f = open(fname)
+        myLines = f.readlines()
         f.close()
 
+    for thisLine in myLines:
+        result = result + '<p>' + thisLine + '</p>'
+    
     result = Markup(result)
     return (result)
 

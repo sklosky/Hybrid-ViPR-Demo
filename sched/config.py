@@ -12,6 +12,6 @@ import os
 PWD = os.path.abspath(os.curdir)
 
 DEBUG = True
-SQLALCHEMY_DATABASE_URI = 'sqlite:///{}/sched.db'.format(PWD)
+#SQLALCHEMY_DATABASE_URI = 'sqlite:///{}/sched.db'.format(PWD)
 SECRET_KEY = 'enydM2ANhdcoKwdVa0jWvEsbPFuQpMjf' # Create your own.
 SESSION_PROTECTION = 'strong'
