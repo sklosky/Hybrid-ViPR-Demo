@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		DE740BA219C9D41800752DB2 /* viprs3.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = viprs3.py; path = sched/viprs3.py; sourceTree = "<group>"; };
+		DEB1BCF019D24C90006C3630 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DEBFEC1A19C67C7800571EE1 /* manage.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = manage.py; sourceTree = "<group>"; };
 		DEBFEC1E19C67C7900571EE1 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		DEBFEC2019C67C7900571EE1 /* app.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = app.py; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		DEBFEC0F19C67BF700571EE1 = {
 			isa = PBXGroup;
 			children = (
+				DEB1BCF019D24C90006C3630 /* README.md */,
 				DE740BA219C9D41800752DB2 /* viprs3.py */,
 				DEBFEC1A19C67C7800571EE1 /* manage.py */,
 				DEBFEC1D19C67C7900571EE1 /* sched */,

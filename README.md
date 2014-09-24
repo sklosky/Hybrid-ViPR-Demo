@@ -1,8 +1,11 @@
 <<<<<<< HEAD
-day3-instant-flask-web-development-book-app
-===========================================
+This is a sample program to highlight ViPR Object and HDFS
+==========================================================
 
-Sample app built in instant flask web development book
+Based on several internet samples
+-Day 3 flask example
+-Matt Cowger Twitter ViPR example
+
 =======
 Hybrid-ViPR-Demo
 ================
