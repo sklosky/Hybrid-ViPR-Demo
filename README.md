@@ -14,4 +14,4 @@ A program to demonstrate S3 ingest and HDFS analytics on a ViPR Data Services sy
 
 ================
 By Stephen Klosky
-@sklosky
+<p>@sklosky</p>
