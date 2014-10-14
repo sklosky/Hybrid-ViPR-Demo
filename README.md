@@ -1,9 +1,10 @@
-This sample program to highlights ViPR Object and HDFS
+A sample ViPR Object and HDFS application
 ==========================================================
 
-Based on several internet samples
--Day 3 flask example
--Matt Cowger Twitter ViPR example
+Based on some other sample apps
+
+<p>-Day 3 flask example</p>
+<p>-Matt Cowger Twitter ViPR example</p>
 
 ================
 Hybrid-ViPR-Demo
