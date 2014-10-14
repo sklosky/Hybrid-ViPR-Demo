@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block main %}
+<div class="row">
+    <div class="login well offset2 span8">
+        <P>This program demonstrates ViPR Services hybrid data protocol in action.</p>
+        <p>Use the Capture page to query twitter.  The query results will be stored via the S3 API into the specified ViPR Services system.</p>
+        <p>Use the Analyze page to initiate, monitor and display the results of a pivotal hadoop map reduce word count job.</p>
+        <p>Use the Options page to setup parameters for running the capture and analyze routines.</p>
+    </div>
+</div>
+{% endblock main %}

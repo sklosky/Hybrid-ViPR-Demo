@@ -24,19 +24,6 @@ if not app.debug:
     app.logger.setHandler(logging.StreamHandler()) # Log to stderr.
     app.logger.setLevel(logging.INFO)
 
-@app.route( '/stream' )
-def stream():
-    g = proc.Group()
-    p = g.run( [ "ls", "-R", "/" ] )
-    
-    def read_process():
-        while g.is_pending():
-            lines = g.readlines()
-            for proc, line in lines:
-                yield line
-    
-    return flask.Response( read_process(), mimetype= 'text/plain' )
-
 @app.errorhandler(404)
 def error_not_found(error):
     """Render a custom template when responding with 404 Not Found."""
@@ -61,3 +48,17 @@ def analyze():
     if request.method == 'POST':
         myInfo = models.run_analyze()
     return render_template('user/analyze.html', error=error, myInfo=myInfo)
+
+@app.route('/options' , methods=['GET','POST'])
+def options():
+    error = None
+    myInfo = None
+#    if request.method == 'POST':
+#        myInfo = models.run_analyze()
+    return render_template('user/options.html', error=error, myInfo=myInfo)
+
+@app.route('/about' , methods=['GET'])
+def about():
+    error = None
+    myInfo = None
+    return render_template('user/about.html', error=error, myInfo=myInfo)

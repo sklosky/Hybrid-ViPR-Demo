@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Options{% endblock title %}
+
+{% block main %}
+<div class="row">
+    <div class="login well offset2 span8">
+        <form method="post" class="form-horizontal">
+            <legend>Hashtag to capture</legend>
+            {% if error %}<p class="alert alert-error">{{ error }}</p>{% endif %}
+            <div class="control-group{% if form.hashtag.errors %} error{% endif%}">
+                {{ form.hashtag.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.hashtag }}
+                    {% for error in form.hashtag.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn">Capture</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% if myInfo %}
+<div class="row">
+    <div class="login well offset2 span8">
+        <form method="post" class="form-horizontal">
+            <legend>Capture Results</legend>
+            <p>
+            {{ myInfo }}
+            </p>
+        </form>
+    </div>
+</div>
+{% endif %}
+{% endblock main %}
