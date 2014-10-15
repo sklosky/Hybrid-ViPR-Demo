@@ -6,31 +6,90 @@
 <div class="row">
     <div class="login well offset2 span8">
         <form method="post" class="form-horizontal">
-            <legend>Hashtag to capture</legend>
+            <legend>Parameter values</legend>
             {% if error %}<p class="alert alert-error">{{ error }}</p>{% endif %}
-            <div class="control-group{% if form.hashtag.errors %} error{% endif%}">
-                {{ form.hashtag.label(class="control-label") }}
+            <div class="control-group{% if form.twitter1.errors %} error{% endif%}">
+                {{ form.twitter1.label(class="control-label") }}
                 <div class="controls">
-                    {{ form.hashtag }}
-                    {% for error in form.hashtag.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                    {{ form.twitter1 }}
+                    {% for error in form.twitter1.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.twitter2.errors %} error{% endif%}">
+                {{ form.twitter2.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.twitter2 }}
+                    {% for error in form.twitter2.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.twitter3.errors %} error{% endif%}">
+                {{ form.twitter3.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.twitter3 }}
+                    {% for error in form.twitter3.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.twitter4.errors %} error{% endif%}">
+                {{ form.twitter4.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.twitter4 }}
+                    {% for error in form.twitter4.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            
+            <div class="control-group{% if form.viprOnline.errors %} error{% endif%}">
+                {{ form.viprOnline.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.viprOnline }}
+                    {% for error in form.viprOnline.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.s3secret.errors %} error{% endif%}">
+                {{ form.s3secret.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.s3secret }}
+                    {% for error in form.s3secret.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.s3user.errors %} error{% endif%}">
+                {{ form.s3user.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.s3user }}
+                    {% for error in form.s3user.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.s3host.errors %} error{% endif%}">
+                {{ form.s3host.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.s3host }}
+                    {% for error in form.s3host.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.s3port.errors %} error{% endif%}">
+                {{ form.s3port.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.s3port }}
+                    {% for error in form.s3port.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.s3bucket.errors %} error{% endif%}">
+                {{ form.s3bucket.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.s3bucket }}
+                    {% for error in form.s3bucket.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="control-group{% if form.maxTweets.errors %} error{% endif%}">
+                {{ form.maxTweets.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.maxTweets }}
+                    {% for error in form.maxTweets.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
                 </div>
             </div>
             <div class="form-actions">
-                <button type="submit" class="btn">Capture</button>
+                <button type="submit" class="btn">Update</button>
             </div>
         </form>
     </div>
 </div>
-{% if myInfo %}
-<div class="row">
-    <div class="login well offset2 span8">
-        <form method="post" class="form-horizontal">
-            <legend>Capture Results</legend>
-            <p>
-            {{ myInfo }}
-            </p>
-        </form>
-    </div>
-</div>
-{% endif %}
 {% endblock main %}

@@ -4,17 +4,18 @@ import logging
 import flask
 
 from flask import Flask
-from flask import abort, jsonify, redirect, render_template, request, url_for , flash
+from flask import abort, jsonify, redirect, render_template, request, url_for, flash, session
 from flask.ext.login import LoginManager, current_user
 from flask.ext.login import login_user, login_required, logout_user
 from flask.ext.sqlalchemy import SQLAlchemy
 
 from sched import config, filters, models
-from sched.forms import CaptureForm
+from sched.forms import CaptureForm, OptionsForm
 from shelljob import proc
 
 app = Flask(__name__)
 app.config.from_object(config)
+app.config['SECRET_KEY'] = 'F34TF$($e34D';
 
 # Load custom Jinja filters from the `filters` module.
 filters.init_app(app)
@@ -51,11 +52,12 @@ def analyze():
 
 @app.route('/options' , methods=['GET','POST'])
 def options():
+    form = OptionsForm(request.form, twitter1='This is a test')
     error = None
     myInfo = None
-#    if request.method == 'POST':
-#        myInfo = models.run_analyze()
-    return render_template('user/options.html', error=error, myInfo=myInfo)
+    if request.method == 'POST':
+        myInfo = models.update_options(form)
+    return render_template('user/options.html', form=form, error=error, myInfo=myInfo)
 
 @app.route('/about' , methods=['GET'])
 def about():
