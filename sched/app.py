@@ -39,7 +39,8 @@ def capture():
     if request.method == 'POST' and form.validate():
         hashtag = form.hashtag.data.lower().strip()
         if len(hashtag) > 0:
-            myInfo = models.run_capture(hashtag)
+            sessionData = get_session_data()
+            myInfo = models.run_capture(hashtag, sessionData)
     return render_template('user/capture.html', form=form, error=error, myInfo=myInfo)
 
 @app.route('/analyze' , methods=['GET','POST'])

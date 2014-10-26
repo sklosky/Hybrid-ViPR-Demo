@@ -10,29 +10,29 @@ from boto.s3.connection import S3Connection
 from boto.s3.key import Key
 import os.path
 
-def run_capture(hashtag):
+def run_capture(hashtag, sessionData):
     result = ''
     
     #Twitter Keys
     #app keys
-    twitter1 = 'XwWIvskkKUm6T5gJ3dofNt7lT'
-    twitter2 = 'ScSrr6ALpJJVNW9CnegmwFpKceZ3OBLULUeKfcWkpHumsffF2W'
+    twitter1 = sessionData['twitter1']
+    twitter2 = sessionData['twitter2']
     #user keys
-    twitter3 = '901773816-mA5lkLrPlUp5LRj5GisZVz28mJgeXctwSce4cm6u'
-    twitter4 = 'BEwO4nxfpTMmH4Pj575nJDPZPiaB2tavngYWyE4k3HUqz'
-    maxTweets = 100
+    twitter3 = sessionData['twitter3']
+    twitter4 = sessionData['twitter4']
+    maxTweets = int(sessionData['maxTweets'])
     
-    viprOnline = None
+    viprOnline = sessionData['viprOnline']
 
-    if (viprOnline):
+    if viprOnline == 'True':
         print 'initializing ViPR system'
 
         #Config info to find ViPR in the vLab
-        s3secret = 'pBdWy02VWtuB3KuOWvFfJp8tiOCVIQDLvAkrou/p'
-        s3user = 'root'
-        s3host = '192.168.1.80'
-        s3port = 9020
-        s3bucket = 'myNewBucket'
+        s3secret = sessionData['s3secret']
+        s3user = sessionData['s3user']
+        s3host = sessionData['s3host']
+        s3port = int(sessionData['s3port'])
+        s3bucket = sessionData['s3bucket']
         print s3secret
         print s3user
         print s3host
@@ -55,7 +55,7 @@ def run_capture(hashtag):
         result = result + '<p>' + '</p>'
         result = result + '<p>' + item['user']['name'].encode('ascii', 'ignore') + '</p>'
         result = result + '<p>' + '@' + item['user']['screen_name'].encode('ascii', 'ignore') + '</p>'
-        if (viprOnline):
+        if viprOnline == 'True':
             targetstring = '@' + item['user']['screen_name'].encode('ascii', 'ignore') + '\r\n' + item['user']['screen_name'].encode('ascii', 'ignore') + '\r\n' + item['text'].encode('ascii', 'ignore')
             mykey = Key(mybucket)
             mykey.key = '/user/hadoop/input/'
