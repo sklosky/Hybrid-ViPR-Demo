@@ -15,18 +15,6 @@ class CaptureForm(Form):
 class OptionsForm(Form):
     #Render HTML input for options form.
     #Processing happens in the view function.
-    
-#    sessionTwitter1 = mydata
-#    sessionTwitter2 = 'a'
-#    sessionTwitter3 = 'a'
-#    sessionTwitter4 = 'a'
-#    sessionViprOnline = 'a'
-#    sessionS3secret = 'a'
-#    sessionS3user = 'a'
-#    sessionS3host = 'a'
-#    sessionS3port = 'a'
-#    sessionS3bucket = 'a'
-#    sessionMaxTweets = 'a'
 
     twitter1 = TextField('OAUTH Token')
     twitter2 = TextField('OAUTH Secret')

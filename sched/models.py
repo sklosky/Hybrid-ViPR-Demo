@@ -90,9 +90,3 @@ def update_options(form):
     result = 'Parameters updated'
 
     return (result)
-
-def get_session_data(session):
-    #get session data; create it if it is not yet set
-    session['test'] = 'This is my test'
-    sessionData = 'testing'
-    return (sessionData)
