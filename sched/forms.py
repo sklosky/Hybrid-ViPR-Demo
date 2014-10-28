@@ -1,7 +1,7 @@
 """Forms to render HTML input & validate request data."""
 
 from wtforms import Form, BooleanField, DateTimeField, PasswordField
-from wtforms import TextAreaField, TextField
+from wtforms import TextAreaField, TextField, FileField
 from wtforms.validators import Length, required
 import models
 
@@ -10,7 +10,8 @@ class CaptureForm(Form):
 
     Processing happens in the view function.
     """
-    hashtag = TextField('Hashtag', [required()])
+    hashtag = TextField('Hashtag')
+    filename = FileField('File')
 
 class OptionsForm(Form):
     #Render HTML input for options form.

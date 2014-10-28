@@ -2,12 +2,13 @@
 
 import logging
 import flask
+import time
 
 from flask import Flask
 from flask import abort, jsonify, redirect, render_template, request, url_for, flash, session
 from flask.ext.login import LoginManager, current_user
 from flask.ext.login import login_user, login_required, logout_user
-from flask.ext.sqlalchemy import SQLAlchemy
+#from flask.ext.sqlalchemy import SQLAlchemy
 
 from sched import config, filters, models
 from sched.forms import CaptureForm, OptionsForm
@@ -27,7 +28,7 @@ if not app.debug:
 
 @app.errorhandler(404)
 def error_not_found(error):
-    """Render a custom template when responding with 404 Not Found."""
+    #Render a custom template when responding with 404 Not Found.
     return render_template('error/not_found.html'), 404
 
 @app.route('/capture/', methods=['GET', 'POST'])
@@ -41,14 +42,35 @@ def capture():
         if len(hashtag) > 0:
             sessionData = get_session_data()
             myInfo = models.run_capture(hashtag, sessionData)
+        #Code for uploading a file here
+        file = request.files['file']
+        if file:
+            myInfo = myInfo + models.run_file_capture(file, sessionData)
     return render_template('user/capture.html', form=form, error=error, myInfo=myInfo)
 
 @app.route('/analyze' , methods=['GET','POST'])
 def analyze():
     error = None
     myInfo = None
+    if 'startTime' in session:
+        startTime = session['startTime']
+    else:
+        startTime = 0
     if request.method == 'POST':
-        myInfo = models.run_analyze()
+        if startTime == 0:
+            session['startTime'] = time.time()
+            myInfo = models.run_analyze()
+            session['pid'] = myInfo
+            myInfo = 'Launched Analysis.  Process ID = ' + str(myInfo)
+        else:
+            myInfo = {}
+            myInfo = models.check_analyze(session['pid'])
+            if myInfo['finished'] == 'True':
+                myInfo = myInfo['output']
+                session.pop('startTime', None)
+            else:
+                myInfo = myInfo['output'] + str(time.time() - session['startTime']) + ' seconds.'
+
     return render_template('user/analyze.html', error=error, myInfo=myInfo)
 
 @app.route('/options' , methods=['GET','POST'])

@@ -4,6 +4,7 @@ from datetime import datetime
 from flask import Markup, session
 from TwitterAPI import TwitterAPI
 import subprocess
+from subprocess import Popen
 import time
 import boto
 from boto.s3.connection import S3Connection
@@ -64,29 +65,75 @@ def run_capture(hashtag, sessionData):
 
     result = Markup(result)
     return result
+
+def run_file_capture(file, sessionData):
+    result = ''
+    viprOnline = sessionData['viprOnline']
     
+    if viprOnline == 'True':
+        print 'initializing ViPR system'
+        
+        #Config info to find ViPR in the vLab
+        s3secret = sessionData['s3secret']
+        s3user = sessionData['s3user']
+        s3host = sessionData['s3host']
+        s3port = int(sessionData['s3port'])
+        s3bucket = sessionData['s3bucket']
+        print s3secret
+        print s3user
+        print s3host
+        
+        conn = S3Connection(aws_access_key_id=s3user,
+                            aws_secret_access_key=s3secret,
+                            host=s3host,
+                            port=s3port,
+                            calling_format='boto.s3.connection.ProtocolIndependentOrdinaryCallingFormat',
+                            is_secure=False)
+                            
+        print 'Listing all buckets for this user'
+        print conn.get_all_buckets()
+        mybucket = conn.get_bucket(s3bucket)
+        mykey = Key(mybucket)
+        mykey.key = '/user/hadoop/input/' + file.filename
+        mykey.set_contents_from_file(file)
+    
+    result = Markup(result)
+    return result
 
 def run_analyze():
     #run the map reduce scripts on the hadoop system
     #note -- will need to run python as the hadoop user
-    result = ''
+    pid = Popen(["tail", "-5", "/users/klosks/output.txt"]).pid
+    return (pid)
+
+def check_analyze(pid):
+    #check the map reduce scripts on the hadoop system
+    #note -- will need to run python as the hadoop user
+    myInfo = {}
+    myInfo['finished'] = 'False'
     myLines = ''
-
-    #check to see if the output file exists
-    fname = '/home/hadoop/output.txt'
-    if (os.path.isfile(fname)):
-        f = open(fname)
-        myLines = f.readlines()
-        f.close()
-
-    for thisLine in myLines:
-        result = result + '<p>' + thisLine + '</p>'
+    result = ''
     
-    result = Markup(result)
-    return (result)
+    #check to see if the process is still running
+    try:
+        os.kill(pid, 0)
+        myInfo['finished'] = 'False'
+        myInfo['output'] = 'The Analysis is running.  It has been running for '
+    except OSError as err:
+        #check to see if the output file exists
+        fname = '/users/klosks/output.txt'
+        if (os.path.isfile(fname)):
+            f = open(fname)
+            myLines = f.readlines()
+            f.close()
+            for thisLine in myLines:
+                result = result + '<p>' + thisLine + '</p>'
+            myInfo['output'] = Markup(result)
+            myInfo['finished'] = 'True'
+    return (myInfo)
 
-def update_options(form):
-    #update the optional parameters
-    result = 'Parameters updated'
+#def update_options(form):
+#    #update the optional parameters
+#    result = 'Parameters updated'
 
     return (result)

@@ -16,12 +16,29 @@
                 </div>
             </div>
             <div class="form-actions">
-                <button type="submit" class="btn">Capture</button>
+                <button type="submit" class="btn">Capture Tweets</button>
             </div>
         </form>
     </div>
 </div>
-{% if myInfo %}
+<div class="row">
+    <div class="login well offset2 span8">
+        <form method="post" class="form-horizontal">
+            <legend>File to capture</legend>
+            {% if error %}<p class="alert alert-error">{{ error }}</p>{% endif %}
+            <div class="control-group{% if form.hashtag.errors %} error{% endif%}">
+                {{ form.filename.label(class="control-label") }}
+                <div class="controls">
+                    {{ form.filename }}
+                    {% for error in form.filename.errors %}<span class="help-inline">{{ error }}</span>{% endfor %}
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn">Capture File</button>
+            </div>
+        </form>
+    </div>
+</div>{% if myInfo %}
     <div class="row">
         <div class="login well offset2 span8">
             <form method="post" class="form-horizontal">
